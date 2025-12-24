@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class PowerRecursive20 {
     
-    public static int calculatePower (int base, int pow) {
+    static int calculatePower(int base, int pow) {
         if (pow == 0) {
+            System.out.print("1"); 
             return 1;
         } else {
+            System.out.print(base + " x ");
             return base * calculatePower(base, pow - 1);
         }
     }
@@ -19,8 +21,8 @@ public class PowerRecursive20 {
         int base = input.nextInt();
         System.out.print("Input Power Number: ");
         int power = input.nextInt();
-
-        System.out.println("Result of " + base + " power " + power + " = " + 
-                        calculatePower(base, power));
+        System.out.print("Calculation Series: ");
+        int result = calculatePower(base, power);
+        System.out.println(" = " + result + "!");
     }
 }
